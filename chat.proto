@@ -1,0 +1,11 @@
+syntax = "proto3";
+package chat;
+option go_package = "path/to/your/package/chat;chatpb";
+
+message Message {
+    string body = 1;
+}
+
+service ChatService {
+    rpc SendMessage(Message) returns (Message){}
+}
